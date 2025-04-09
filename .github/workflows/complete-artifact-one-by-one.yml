@@ -19,6 +19,8 @@ on:
         - legacy
         - current
         - edge
+        - vendor
+        - collabora
         default: 'current'
 
       armbian_release:
@@ -332,7 +334,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: armbian/build@v24.8.1
+      - uses: armbian/build@main
         with:
           armbian_token:              "${{secrets.GITHUB_TOKEN}}"
           armbian_target:             "${{inputs.armbian_target}}"
